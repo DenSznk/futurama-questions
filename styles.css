@@ -1,7 +1,6 @@
 .outer-container {
-    height: auto;
-      min-height: 100%;
-    width: 100%;
+    width: 100vw;
+    height: 100vh;
     background-image:
       radial-gradient( rgba(255,255,255,.9) 0%, rgba(255,255,255,0) 80%),
       linear-gradient(180deg, rgba(0,0,0,0) 50%, #4AE0FF 50%, #4AE0FF),
@@ -29,3 +28,99 @@
     padding: 2rem 0;
     position: relative;
   }
+
+  .options {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin: 20px 0;
+    border-radius: 8px;
+  }
+
+  .option-div {
+    padding: 10px;
+    background-color: lightblue;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 8px;
+    border-color: deepskyblue;
+    min-width: 150px;
+    min-height: 30px;
+    font-family: Courier;
+    color: rgb(201, 91, 91)
+}
+
+.option-div:hover {
+    background-color: deepskyblue;
+}
+
+.quiz-block {
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 50px 150px;
+    border-radius: 16px;
+}
+
+.question-title {
+    font-family: Courier;
+    color: rgb(201, 91, 91);
+
+}
+.title {
+    font-family: Courier;
+    font-size: 36px;
+    color: rgb(181, 47, 196);
+    margin-bottom: 50px;
+}
+.amount {
+    font-family: Courier;
+    color: rgb(201, 91, 91);
+}
+
+.result-modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 50%;
+    top: 50%;
+    width: 50%;
+    height: 50%;
+    overflow: auto;
+    background-color: rgb(244, 242, 242);
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+    border-radius: 16px;
+}
+.modal-data {
+    font-family: Courier;
+    color: rgb(201, 91, 91);
+    text-align: center;
+}
+.close-div {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid deepskyblue;
+    border-radius: 8px;
+    cursor: pointer;
+    border-color: deepskyblue;
+    background-color: rgb(54, 140, 169);
+}
+.close-div:hover {
+    background-color: deepskyblue;
+    border: 1px solid deepskyblue;
+    border-color: rgb(54, 140, 169);
+}
+.close {
+    font-size: 20px;
+    padding: 10px;
+    color: rgb(173, 188, 193);
+}
+.modal-content {
+    position: relative;
+
+}
